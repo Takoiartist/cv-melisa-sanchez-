@@ -33,19 +33,21 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,420&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --paper: #F1F0F5;
-    --paper-deep: #E9E7F0;
-    --ink: #18171C;
-    --ink-soft: #55525F;
-    --meiw: #88A9AC;
-    --meiw-dark: #6B8A8D;
-    --meiw-light: #DCE8E9;
-    --line: #D9D6E2;
-    --serif: 'Fraunces', serif;
+    --paper: #FBFAFE;
+    --paper-deep: #F1EFFB;
+    --ink: #16151C;
+    --ink-soft: #5B5866;
+    --meiw: #A9A1E8;
+    --meiw-dark: #7C72D6;
+    --meiw-light: #E7E3FA;
+    --mint: #C9ECD6;
+    --mint-dark: #7FC79B;
+    --line: #E1DEEE;
+    --serif: 'Baloo 2', sans-serif;
     --sans: 'Inter', sans-serif;
     --wrap: 1180px;
   }
@@ -66,13 +68,34 @@
 
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;}
 
-  h1,h2,h3{font-family:var(--serif);font-weight:480;margin:0;letter-spacing:-0.01em;}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;letter-spacing:-0.01em;}
 
+  /* Etiqueta tipo "pill" con puntitos — el mismo lenguaje visual del CV
+     ("Perfil profesional", "Software", "Contacto"...) */
   .label{
+    display:inline-flex; align-items:center;
     font-size:13px;
-    color:var(--ink-soft);
-    font-weight:500;
-    margin:0 0 10px;
+    color:var(--ink);
+    font-weight:600;
+    margin:0 0 14px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    padding:7px 18px;
+    background:#fff;
+  }
+  .label::after{
+    content:"";
+    width:5px; height:5px; border-radius:50%;
+    background:var(--ink);
+    margin-left:16px;
+    box-shadow: 9px 0 0 var(--ink), 18px 0 0 var(--ink);
+  }
+
+  .chip{
+    display:inline-flex; align-items:center;
+    border:1.5px solid var(--line); border-radius:999px;
+    padding:8px 16px; font-size:13.5px; color:var(--ink-soft);
+    background:var(--paper-deep);
   }
 
   .link-underline{ position:relative; display:inline-block; }
@@ -178,13 +201,19 @@
   .profile-text p{ margin:0 0 20px; }
   .profile-text p:last-child{ margin-bottom:0; }
 
+  .profile-photo-wrap{
+    width:176px; height:176px;
+    border-radius:50%;
+    background:var(--mint);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:28px;
+  }
   .profile-photo{
-    width:160px; height:160px;
+    width:156px; height:156px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid var(--meiw);
-    margin-bottom:28px;
-    box-shadow:0 8px 24px rgba(136,169,172,.25);
+    border:4px solid #fff;
+    box-shadow:0 8px 24px rgba(169,161,232,.28);
   }
 
   .profile-facts{
@@ -275,18 +304,47 @@
   }
   .toolkit-list span.t{ color:var(--ink-soft); font-size:13.5px; }
 
-  /* EDUCATION */
+  /* EDUCATION / EXPERIENCE — timeline vertical, como en el CV */
+  .timeline{ position:relative; padding-left:28px; }
+  .timeline::before{
+    content:""; position:absolute; left:5px; top:8px; bottom:8px;
+    width:2px; background:var(--meiw-light);
+  }
   .edu-row{
-    display:grid; grid-template-columns:200px 1fr; gap:32px;
+    position:relative;
+    display:grid; grid-template-columns:160px 1fr; gap:32px;
     padding:22px 0; border-top:1px solid var(--line);
   }
   .edu-row:last-child{ border-bottom:1px solid var(--line); }
+  .edu-row::before{
+    content:""; position:absolute; left:-28px; top:34px;
+    width:12px; height:12px; border-radius:50%;
+    background:var(--paper); border:2.5px solid var(--meiw);
+  }
   .edu-row h3{ font-size:18px; margin-bottom:4px; }
   .edu-row p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
   .edu-tag{
     display:inline-block; margin-top:8px; font-size:12px; color:var(--meiw-dark);
-    border:1px solid var(--meiw); border-radius:2px; padding:3px 8px;
+    border:1px solid var(--meiw); border-radius:999px; padding:3px 10px;
   }
+
+  /* SOFTWARE — íconos + barra, como el bloque "Software" del CV */
+  .software-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:18px 32px; margin-top:22px;
+  }
+  .software-item{ display:flex; align-items:center; gap:14px; }
+  .sw-icon{
+    width:40px; height:40px; flex-shrink:0;
+    border-radius:12px; border:1.5px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-weight:700; font-size:14px;
+    background:#fff;
+  }
+  .sw-bar{ flex:1; height:10px; border-radius:999px; background:var(--paper-deep); overflow:hidden; }
+  .sw-bar span{ display:block; height:100%; background:var(--meiw); border-radius:999px; }
+
+  /* SOFT SKILLS */
+  .skills-row{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
 
   /* AVAILABILITY */
   .avail{
@@ -438,8 +496,10 @@
     <div class="profile-grid reveal">
       <div class="label">Perfil</div>
       <div>
-        <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/melisa%20foto.webp" alt="Melisa Sánchez" class="profile-photo" loading="lazy">
-        
+        <div class="profile-photo-wrap">
+          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/melisa%20foto.webp" alt="Melisa Sánchez" class="profile-photo" loading="lazy">
+        </div>
+
         <div class="profile-text">
           <p>Soy diseñadora digital con más de cuatro años de experiencia entre
           interfaz, web y editorial. Trabajo en la traducción de sistemas
@@ -461,6 +521,13 @@
           <div><div class="n">Español</div><div class="d">Nativo</div></div>
           <div><div class="n">Inglés</div><div class="d">Lectura con apoyo de herramientas</div></div>
           <div><div class="n">Colombia</div><div class="d">Disponible en remoto</div></div>
+        </div>
+
+        <div class="skills-row">
+          <span class="chip">Trabajo en equipo</span>
+          <span class="chip">Autonomía</span>
+          <span class="chip">Gestión de tiempo</span>
+          <span class="chip">Creatividad</span>
         </div>
       </div>
     </div>
@@ -633,5 +700,171 @@
           <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/laboratroio%20(1).webp" alt="Laboratorio de Innovación Comunitaria" loading="lazy">
         </div>
         <h3>Laboratorio de Innovación Comunitaria — Naciones Unidas Colombia</h3>
-        <p>Diseño e implementación de repositorio de documentos para
-        proyecto de aplicación de metodología
+        <p>Diseño e implementación, ilustraciones de repositorio de
+        documentos para proyecto de aplicación de metodología en la
+        atención de emergencias específicas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Trabajo seleccionado</div>
+      <h2>Contenido &amp; motion</h2>
+    </div>
+    <div class="content-block">
+      <div class="reel-card">
+        <h3>Reels &amp; contenido vertical</h3>
+        <p>Edición de video vertical y piezas para redes sociales, con
+        ilustración digital aplicada a contenido de marca.</p>
+        <div class="work-tags">CapCut Pro · Ilustración digital</div>
+      </div>
+      <div class="ai-block">
+        <div class="software-grid">
+          <div class="software-item">
+            <div class="sw-icon">Ai</div>
+            <div class="sw-bar"><span style="width:82%"></span></div>
+          </div>
+          <div class="software-item">
+            <div class="sw-icon">Id</div>
+            <div class="sw-bar"><span style="width:78%"></span></div>
+          </div>
+          <div class="software-item">
+            <div class="sw-icon">Ps</div>
+            <div class="sw-bar"><span style="width:85%"></span></div>
+          </div>
+        </div>
+        <div class="ai-row"><div class="k">Formatos</div><div>Reels, piezas cuadradas y verticales para redes</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Experiencia</div>
+      <h2>Trayectoria profesional</h2>
+    </div>
+    <div class="timeline">
+      <div class="edu-row">
+        <div class="work-year">2023 — 2024</div>
+        <div>
+          <h3>Diseñadora gráfica — Ivolución, Bogotá</h3>
+          <p>Identidad visual, UI, UX, web y editorial. Diseño de interfaz
+          para En Cadena, Lukin, Mi Gestor y +Listos, y piezas editoriales
+          para UNICEF, Naciones Unidas Colombia y Fundación Alpina.</p>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="work-year">2022 — 2023</div>
+        <div>
+          <h3>Diseñadora gráfica — CCR Effect, Florida</h3>
+          <p>Marketing digital y diseño web para las cuentas de la
+          compañía.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formacion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Formación</div>
+      <h2>Educación</h2>
+    </div>
+    <div class="timeline">
+      <div class="edu-row">
+        <div class="work-year">Actualidad</div>
+        <div>
+          <h3>Tecnólogo en Desarrollo Multimedia y Web</h3>
+          <p>SENA Risaralda — en etapa productiva.</p>
+          <span class="edu-tag">En curso</span>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="work-year">2023</div>
+        <div>
+          <h3>Diseño de interfaces únicas</h3>
+          <p>Platzy.</p>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="work-year">2016</div>
+        <div>
+          <h3>Tecnólogo en Diseño para la Industria de la Moda</h3>
+          <p>SENA CTA.</p>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="work-year">2012</div>
+        <div>
+          <h3>Bachillerato Académico</h3>
+          <p>Instituto Comercial Práctico INSCOP.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avail">
+  <div class="wrap reveal">
+    <h2>Disponible para nuevos proyectos</h2>
+    <p>Trabajo en remoto desde Colombia, en interfaz, diseño web y sistemas
+    editoriales. Si tienes un proyecto en mente, hablemos.</p>
+    <span class="status-dot">Disponible para trabajo remoto</span>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact-grid reveal">
+      <div class="label">Contacto</div>
+      <div class="contact-list">
+        <a href="mailto:melisa.sanchez.molina.1995@gmail.com">Email<span class="sm">melisa.sanchez.molina.1995@gmail.com</span></a>
+        <a href="https://wa.me/573206917205" target="_blank" rel="noopener">WhatsApp<span class="sm">+57 320 691 7205</span></a>
+        <a href="https://www.linkedin.com/in/melisa-s%C3%A1nchez-3078b3330/" target="_blank" rel="noopener">LinkedIn<span class="sm">melisa-sánchez</span></a>
+        <a href="https://www.behance.net/melisasanchezmeiw" target="_blank" rel="noopener">Behance<span class="sm">melisasanchezmeiw</span></a>
+        <a href="https://www.instagram.com/meiw_creative1995/" target="_blank" rel="noopener">Instagram<span class="sm">@meiw_creative1995</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/041301b11863a7e9699e3cd4b6ffed550ac81658/logo%20meiw%20creative.webp" alt="MEIW Creative">
+    <div class="footer-links">
+      <a href="mailto:melisa.sanchez.molina.1995@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/melisa-s%C3%A1nchez-3078b3330/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.behance.net/melisasanchezmeiw" target="_blank" rel="noopener">Behance</a>
+      <a href="https://www.instagram.com/meiw_creative1995/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="footer-copy">© <span id="year"></span> Melisa Sánchez — MEIW Creative. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/573206917205" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.7 4.605 1.902 6.472L4 29l7.72-1.867A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.63 28 15.001 28 8.373 22.63 3 16.001 3zm6.94 17.06c-.29.82-1.44 1.51-2.36 1.7-.63.13-1.45.24-4.21-.9-3.53-1.46-5.8-5.03-5.98-5.27-.17-.24-1.43-1.9-1.43-3.63 0-1.72.9-2.57 1.22-2.92.32-.35.7-.44.93-.44.23 0 .47.01.67.02.21.01.5-.08.79.6.29.7.98 2.42 1.07 2.6.09.18.15.4.03.64-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.75.21.37.93 1.53 1.99 2.48 1.37 1.22 2.52 1.6 2.89 1.78.37.18.58.15.8-.09.22-.24.94-1.09 1.19-1.47.25-.37.5-.31.83-.19.34.12 2.15 1.01 2.52 1.2.37.18.61.28.7.43.09.16.09.9-.2 1.72z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
