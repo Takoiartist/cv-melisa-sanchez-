@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Melisa Sánchez — Diseñadora digital y multimedia | UI, Web & Editorial</title>
-<meta name="description" content="Diseñadora digital y multimedia con más de 4 años de experiencia en UI, diseño web y editorial. Proyectos para UNICEF, Naciones Unidas y Fundación Alpina. Disponible para trabajo remoto desde Colombia.">
-<meta name="keywords" content="digital designer colombia, ui designer remoto, diseñadora web colombia, multimedia designer, diseñadora editorial, remote designer latam, diseñadora ui ux">
-<meta property="og:title" content="Melisa Sánchez — Diseñadora digital y multimedia">
-<meta property="og:description" content="UI, Web y Editorial. Proyectos para UNICEF, Naciones Unidas y Fundación Alpina. Disponible para trabajo remoto.">
+<title id="pageTitle">Melisa Sánchez — Digital & Multimedia Designer | UI, Web & Editorial</title>
+<meta id="metaDescription" name="description" content="Digital & multimedia designer with 4+ years of experience in UI, web design, and editorial design. Projects for UNICEF, the United Nations, and Fundación Alpina. Available for remote work from Colombia.">
+<meta name="keywords" content="digital designer colombia, ui designer remote, web designer colombia, multimedia designer, editorial designer, remote designer latam, ui ux designer">
+<meta id="ogTitle" property="og:title" content="Melisa Sánchez — Digital & Multimedia Designer">
+<meta id="ogDescription" property="og:description" content="UI, Web & Editorial. Projects for UNICEF, the United Nations, and Fundación Alpina. Available for remote work.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_CO">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_CO">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Favicon con logo MEIW Creative -->
@@ -21,8 +22,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Melisa Sánchez Molina",
-  "jobTitle": "Diseñadora digital y multimedia",
-  "knowsAbout": ["UI Design", "Diseño Web", "Diseño Editorial", "Multimedia", "Ilustración digital"],
+  "jobTitle": "Digital & Multimedia Designer",
+  "knowsAbout": ["UI Design", "Web Design", "Editorial Design", "Multimedia", "Digital Illustration"],
   "sameAs": [
     "https://www.linkedin.com/in/melisa-s%C3%A1nchez-3078b3330/",
     "https://www.behance.net/melisasanchezmeiw",
@@ -74,6 +75,7 @@
      ("Perfil profesional", "Software", "Contacto"...) */
   .label{
     display:inline-flex; align-items:center;
+    align-self:flex-start; justify-self:start;
     font-size:13px;
     color:var(--ink);
     font-weight:600;
@@ -82,12 +84,15 @@
     border-radius:999px;
     padding:7px 18px;
     background:#fff;
+    line-height:1.2;
+    height:auto;
   }
   .label::after{
     content:"";
     width:5px; height:5px; border-radius:50%;
     background:var(--ink);
     margin-left:16px;
+    margin-right:22px;
     box-shadow: 9px 0 0 var(--ink), 18px 0 0 var(--ink);
   }
 
@@ -132,6 +137,14 @@
     border-radius:2px; white-space:nowrap;
   }
   .nav-cv:hover{ background:var(--ink); color:var(--paper); }
+
+  .lang-toggle{
+    font-family:var(--sans); font-size:13px; font-weight:600;
+    border:1px solid var(--ink); background:#fff; color:var(--ink);
+    padding:8px 14px; border-radius:999px; cursor:pointer;
+    line-height:1; transition:all .2s ease;
+  }
+  .lang-toggle:hover{ background:var(--ink); color:var(--paper); }
 
   /* HERO */
   .hero{ padding:96px 0 72px; }
@@ -201,19 +214,13 @@
   .profile-text p{ margin:0 0 20px; }
   .profile-text p:last-child{ margin-bottom:0; }
 
-  .profile-photo-wrap{
-    width:176px; height:176px;
-    border-radius:50%;
-    background:var(--mint);
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:28px;
-  }
   .profile-photo{
-    width:156px; height:156px;
+    width:112px; height:112px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid #fff;
-    box-shadow:0 8px 24px rgba(169,161,232,.28);
+    border:3px solid var(--mint);
+    margin-bottom:28px;
+    box-shadow:0 6px 16px rgba(169,161,232,.24);
   }
 
   .profile-facts{
@@ -239,8 +246,9 @@
   }
   .work-row:last-child{ border-bottom:1px solid var(--line); }
   .work-year{ font-family:var(--serif); font-size:15px; color:var(--ink-soft); padding-top:4px; }
+  .work-content{ width:100%; }
   .work-main{ display:flex; justify-content:space-between; gap:28px; flex-wrap:wrap; }
-  .work-info{ max-width:600px; flex:1 1 400px; }
+  .work-info{ max-width:560px; flex:1 1 340px; }
   .work-info h3{ font-size:24px; margin-bottom:8px; transition:color .2s ease; }
   .work-row:hover .work-info h3{ color:var(--meiw-dark); }
   .work-info p{ margin:0 0 12px; color:var(--ink-soft); font-size:15px; }
@@ -254,10 +262,13 @@
   /* MOCKUPS */
   .work-mockup{
     margin-top:20px;
+    flex:1 1 420px;
+    min-width:320px;
+    max-width:520px;
     border-radius:6px;
     overflow:hidden;
     border:1px solid var(--line);
-    background:var(--paper-deep);
+    background:#fff;
     transition:transform .3s ease, box-shadow .3s ease;
   }
   .work-mockup:hover{
@@ -265,6 +276,10 @@
     box-shadow:0 16px 40px rgba(136,169,172,.18);
   }
   .work-mockup img{ width:100%; height:auto; display:block; }
+
+  @media (max-width: 640px){
+    .work-mockup{ min-width:0; max-width:100%; flex-basis:100%; }
+  }
 
   /* EDITORIAL */
   .editorial-grid{
@@ -447,36 +462,39 @@
       Melisa Sánchez
     </div>
     <ul class="nav-links">
-      <li><a href="#trabajo" class="link-underline">Trabajo</a></li>
-      <li><a href="#experiencia" class="link-underline">Experiencia</a></li>
-      <li><a href="#formacion" class="link-underline">Formación</a></li>
-      <li><a href="#contacto" class="link-underline">Contacto</a></li>
+      <li><a href="#trabajo" class="link-underline" data-i18n="navWork">Work</a></li>
+      <li><a href="#experiencia" class="link-underline" data-i18n="navExp">Experience</a></li>
+      <li><a href="#formacion" class="link-underline" data-i18n="navEdu">Education</a></li>
+      <li><a href="#contacto" class="link-underline" data-i18n="navContact">Contact</a></li>
     </ul>
-    <a class="nav-cv" href="mailto:melisa.sanchez.molina.1995@gmail.com?subject=Solicitud%20de%20CV">Descargar CV</a>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a class="nav-cv" data-i18n="navCv" href="mailto:melisa.sanchez.molina.1995@gmail.com?subject=CV%20request">Download CV</a>
+      <button type="button" id="langToggle" class="lang-toggle" aria-label="Switch language / Cambiar idioma">ES</button>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
     <h1 class="hero-name">Melisa<br>Sánchez</h1>
-    <p class="hero-role">
-      <strong>Diseñadora digital y multimedia.</strong> Diseño interfaz, sitios web y
-      sistemas editoriales para plataformas y organizaciones que necesitan
-      comunicar con claridad.
+    <p class="hero-role" data-i18n-html="heroRole">
+      <strong>Digital &amp; multimedia designer.</strong> I design interfaces, websites and
+      editorial systems for platforms and organizations that need to
+      communicate clearly.
     </p>
 
     <div class="hero-meta">
-      <div><div class="n">4+</div><div class="l">Años de experiencia</div></div>
-      <div><div class="n">UI / UX</div><div class="l">Interfaz y producto</div></div>
-      <div><div class="n">Web</div><div class="l">Diseño y actualización de sitios</div></div>
-      <div><div class="n">Editorial</div><div class="l">Guías, manuales, publicaciones</div></div>
+      <div><div class="n">4+</div><div class="l" data-i18n="heroMeta1">Years of experience</div></div>
+      <div><div class="n">UI / UX</div><div class="l" data-i18n="heroMeta2">Interface &amp; product</div></div>
+      <div><div class="n">Web</div><div class="l" data-i18n="heroMeta3">Web design &amp; site updates</div></div>
+      <div><div class="n">Editorial</div><div class="l" data-i18n="heroMeta4">Guides, manuals, publications</div></div>
     </div>
 
     <div class="hero-actions">
-      <a href="#trabajo" class="btn btn-primary">Ver proyectos</a>
-      <a href="mailto:melisa.sanchez.molina.1995@gmail.com?subject=Solicitud%20de%20CV" class="btn btn-ghost">Descargar CV</a>
-      <a href="#contacto" class="btn btn-ghost">Contacto</a>
-      <span class="status-dot">Disponible para trabajo remoto</span>
+      <a href="#trabajo" class="btn btn-primary" data-i18n="heroBtnWork">View work</a>
+      <a href="mailto:melisa.sanchez.molina.1995@gmail.com?subject=CV%20request" class="btn btn-ghost" data-i18n="navCv">Download CV</a>
+      <a href="#contacto" class="btn btn-ghost" data-i18n="navContact">Contact</a>
+      <span class="status-dot" data-i18n="statusDot">Available for remote work</span>
     </div>
   </div>
 </section>
@@ -484,7 +502,7 @@
 <div class="clients">
   <div class="wrap">
     <span>UNICEF</span>
-    <span>Naciones Unidas Colombia</span>
+    <span data-i18n="clientUN">United Nations Colombia</span>
     <span>Fundación Alpina</span>
     <span>En Cadena</span>
     <span>Ocensa</span>
@@ -494,40 +512,38 @@
 <section id="perfil">
   <div class="wrap">
     <div class="profile-grid reveal">
-      <div class="label">Perfil</div>
+      <div class="label" data-i18n="labelProfile">Profile</div>
       <div>
-        <div class="profile-photo-wrap">
-          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/melisa%20foto.webp" alt="Melisa Sánchez" class="profile-photo" loading="lazy">
-        </div>
+        <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/melisa%20foto.webp" alt="Melisa Sánchez" class="profile-photo" loading="lazy">
 
         <div class="profile-text">
-          <p>Soy diseñadora digital con más de cuatro años de experiencia entre
-          interfaz, web y editorial. Trabajo en la traducción de sistemas
-          complejos —plataformas de gestión, metodologías de intervención
-          social, repositorios documentales— en productos visuales que la
-          gente efectivamente usa.</p>
-          <p>En Ivolución diseñé la interfaz de varias plataformas digitales,
-          desde el rebranding de En Cadena hasta los flujos de Lukin, Mi
-          Gestor y el proyecto +Listos con UNICEF. En paralelo <strong>trabajé en conjunto</strong> en piezas
-          de la línea editorial para UNICEF, Naciones Unidas Colombia y
-          Fundación Alpina: diseño, diagramación e ilustración de guías y
-          metodologías completas.</p>
-          <p>Actualmente curso el Tecnólogo en Desarrollo Multimedia y Web del
-          SENA, en etapa productiva, y trabajo como freelancer en diseño
-          digital, UI y contenido.</p>
+          <p data-i18n="profileP1">I'm a digital designer with more than four years of
+          experience across interface, web, and editorial design. I translate
+          complex systems — management platforms, social intervention
+          methodologies, document repositories — into visual products that
+          people actually use.</p>
+          <p data-i18n-html="profileP2">At Ivolución I designed the interface for several digital
+          platforms, from the En Cadena rebrand to the flows for Lukin, Mi
+          Gestor and the +Listos project with UNICEF. In parallel <strong>I collaborated</strong> on pieces
+          for the editorial line for UNICEF, United Nations Colombia and
+          Fundación Alpina: design, layout and illustration for complete
+          guides and methodologies.</p>
+          <p data-i18n="profileP3">I'm currently completing a Technologist degree in
+          Multimedia and Web Development at SENA, in my work-placement stage,
+          and I work as a freelancer in digital design, UI and content.</p>
         </div>
 
         <div class="profile-facts">
-          <div><div class="n">Español</div><div class="d">Nativo</div></div>
-          <div><div class="n">Inglés</div><div class="d">Lectura con apoyo de herramientas</div></div>
-          <div><div class="n">Colombia</div><div class="d">Disponible en remoto</div></div>
+          <div><div class="n" data-i18n="factEsN">Spanish</div><div class="d" data-i18n="factEsD">Native</div></div>
+          <div><div class="n" data-i18n="factEnN">English</div><div class="d" data-i18n="factEnD">Reading, tool-assisted</div></div>
+          <div><div class="n">Colombia</div><div class="d" data-i18n="factCoD">Available remotely</div></div>
         </div>
 
         <div class="skills-row">
-          <span class="chip">Trabajo en equipo</span>
-          <span class="chip">Autonomía</span>
-          <span class="chip">Gestión de tiempo</span>
-          <span class="chip">Creatividad</span>
+          <span class="chip" data-i18n="chipTeam">Teamwork</span>
+          <span class="chip" data-i18n="chipAuto">Autonomy</span>
+          <span class="chip" data-i18n="chipTime">Time management</span>
+          <span class="chip" data-i18n="chipCreative">Creativity</span>
         </div>
       </div>
     </div>
@@ -537,31 +553,31 @@
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="label">Áreas</div>
-      <h2>En qué trabajo</h2>
+      <div class="label" data-i18n="labelAreas">Areas</div>
+      <h2 data-i18n="h2Areas">What I do</h2>
     </div>
     <div class="expertise-grid">
       <div class="expertise-item">
-        <h3>Interfaz &amp; producto</h3>
-        <p>Diseño de interfaz a partir de historias de usuario: flujos,
-        secciones, estados y componentes para plataformas web. Rebranding
-        de producto.</p>
+        <h3 data-i18n="exp1h">Interface &amp; product</h3>
+        <p data-i18n="exp1p">Interface design based on user stories: flows,
+        sections, states and components for web platforms. Product
+        rebranding.</p>
       </div>
       <div class="expertise-item">
-        <h3>Diseño web</h3>
-        <p>Diseño y actualización de sitios web, identidad visual aplicada
-        a entornos digitales.</p>
+        <h3 data-i18n="exp2h">Web design</h3>
+        <p data-i18n="exp2p">Design and updates for websites, visual identity
+        applied to digital environments.</p>
       </div>
       <div class="expertise-item">
-        <h3>Editorial &amp; sistemas</h3>
-        <p>Diagramación de guías, manuales y metodologías. Repositorios
-        documentales. Sistemas gráficos para publicaciones de largo
-        formato.</p>
+        <h3 data-i18n="exp3h">Editorial &amp; systems</h3>
+        <p data-i18n="exp3p">Layout for guides, manuals and methodologies.
+        Document repositories. Graphic systems for long-form
+        publications.</p>
       </div>
       <div class="expertise-item">
-        <h3>Contenido &amp; motion</h3>
-        <p>Ilustración digital, edición de Reels y contenido vertical en
-        CapCut Pro, piezas para redes sociales.</p>
+        <h3 data-i18n="exp4h">Content &amp; motion</h3>
+        <p data-i18n="exp4p">Digital illustration, Reels editing and vertical
+        content in CapCut Pro, social media pieces.</p>
       </div>
     </div>
   </div>
@@ -570,87 +586,98 @@
 <section id="trabajo">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="label">Trabajo seleccionado</div>
-      <h2>Interfaz &amp; producto digital</h2>
+      <div class="label" data-i18n="labelSelected">Selected work</div>
+      <h2 data-i18n="h2Interfaz">Interface &amp; digital product</h2>
     </div>
 
     <div class="work-list">
       <div class="work-row">
         <div class="work-year">2023</div>
-        <div class="work-main">
-          <div class="work-info">
-            <h3>En Cadena</h3>
-            <p>Rebranding de la plataforma En Cadena, diseño de historias
-            de usuario y planeación de la experiencia de usuario.</p>
-            <div class="work-tags">Ivolución · Diseño de interfaz</div>
-            <div class="work-mockup">
-              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/en-cadena.webp" alt="Mockup En Cadena" loading="lazy">
+        <div class="work-content">
+          <div class="work-main">
+            <div class="work-info">
+              <h3>En Cadena</h3>
+            <p data-i18n="workEnCadenaP">Rebrand of the En Cadena platform,
+            user story design and UX planning.</p>
+            <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
             </div>
+            <span class="work-link muted" data-i18n="internalProject">Internal project · no public link</span>
           </div>
-          <span class="work-link muted">Proyecto interno · sin enlace público</span>
+          <div class="work-mockup">
+            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/mas%20lsitos%20(1).webp" alt="Mockup En Cadena" loading="lazy">
+          </div>
         </div>
       </div>
 
       <div class="work-row">
         <div class="work-year">2024</div>
-        <div class="work-main">
-          <div class="work-info">
-            <h3>+Listos — UNICEF</h3>
-            <p>Diseño de historias de usuario, ilustración de iconos,
-            botones y secciones de la plataforma.</p>
-            <div class="work-tags">Ivolución · Diseño de interfaz</div>
-            <div class="work-mockup">
-              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/mas%20lsitos.webp" alt="Mockup +Listos UNICEF" loading="lazy">
+        <div class="work-content">
+          <div class="work-main">
+            <div class="work-info">
+              <h3>+Listos — UNICEF</h3>
+            <p data-i18n="workListosP">User story design, illustration of
+            icons, buttons and platform sections.</p>
+            <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
             </div>
+            <a class="work-link link-underline" href="https://maslistospruebas.ivolucion.com/inicio-sesion" target="_blank" rel="noopener" data-i18n="viewProject">View project</a>
           </div>
-          <a class="work-link link-underline" href="https://maslistospruebas.ivolucion.com/inicio-sesion" target="_blank" rel="noopener">Ver proyecto</a>
+          <div class="work-mockup">
+            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/ss.webp" alt="Mockup +Listos UNICEF" loading="lazy">
+          </div>
         </div>
       </div>
 
       <div class="work-row">
         <div class="work-year">2023</div>
-        <div class="work-main">
-          <div class="work-info">
-            <h3>Mi Gestor</h3>
-            <p>Diseño de historias de usuario para plataforma de gestión.</p>
-            <div class="work-tags">Ivolución · Diseño de interfaz</div>
-            <div class="work-mockup">
-              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/mi%20gestor.webp" alt="Mockup Mi Gestor" loading="lazy">
+        <div class="work-content">
+          <div class="work-main">
+            <div class="work-info">
+              <h3>Mi Gestor</h3>
+            <p data-i18n="workGestorP">User story design for a management
+            platform.</p>
+            <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
             </div>
+            <a class="work-link link-underline" href="https://mgpruebascc.ivolucion.com/inicio-sesion" target="_blank" rel="noopener" data-i18n="viewProject">View project</a>
           </div>
-          <a class="work-link link-underline" href="https://mgpruebascc.ivolucion.com/inicio-sesion" target="_blank" rel="noopener">Ver proyecto</a>
+          <div class="work-mockup">
+            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/mi%20gestor%20(1).webp" alt="Mockup Mi Gestor" loading="lazy">
+          </div>
         </div>
       </div>
 
       <div class="work-row">
         <div class="work-year">2024</div>
-        <div class="work-main">
-          <div class="work-info">
-            <h3>Lukin</h3>
-            <p>Diseño de historias de usuario, ilustración de iconos,
-            botones y secciones.</p>
-            <div class="work-tags">Ivolución · Diseño de interfaz</div>
-            <div class="work-mockup">
-              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/lukin.webp" alt="Mockup Lukin" loading="lazy">
+        <div class="work-content">
+          <div class="work-main">
+            <div class="work-info">
+              <h3>Lukin</h3>
+            <p data-i18n="workGenericP">User story design, illustration of
+            icons, buttons and sections.</p>
+            <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
             </div>
+            <a class="work-link link-underline" href="https://lukin.ivolucion.com/inicio" target="_blank" rel="noopener" data-i18n="viewProject">View project</a>
           </div>
-          <a class="work-link link-underline" href="https://lukin.ivolucion.com/inicio" target="_blank" rel="noopener">Ver proyecto</a>
+          <div class="work-mockup">
+            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/6b11ef2a3d47097d19a5f9cbfaf91fb4a2a034a6/mas%20lsitoss.webp" alt="Mockup Lukin" loading="lazy">
+          </div>
         </div>
       </div>
 
       <div class="work-row">
         <div class="work-year">2024</div>
-        <div class="work-main">
-          <div class="work-info">
-            <h3>Marca Blanca</h3>
-            <p>Diseño de historias de usuario, ilustración de iconos,
-            botones y secciones.</p>
-            <div class="work-tags">Ivolución · Diseño de interfaz</div>
-            <div class="work-mockup">
-              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/marca%20blanca.webp" alt="Mockup Marca Blanca" loading="lazy">
+        <div class="work-content">
+          <div class="work-main">
+            <div class="work-info">
+              <h3>Marca Blanca</h3>
+            <p data-i18n="workGenericP">User story design, illustration of
+            icons, buttons and sections.</p>
+            <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
             </div>
+            <span class="work-link muted" data-i18n="internalProject">Internal project · no public link</span>
           </div>
-          <span class="work-link muted">Proyecto interno · sin enlace público</span>
+          <div class="work-mockup">
+            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/marca%20blanca%20(1).webp" alt="Mockup Marca Blanca" loading="lazy">
+          </div>
         </div>
       </div>
     </div>
@@ -660,8 +687,8 @@
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="label">Trabajo seleccionado</div>
-      <h2>Editorial &amp; cooperación</h2>
+      <div class="label" data-i18n="labelSelected">Selected work</div>
+      <h2 data-i18n="h2Editorial">Editorial &amp; cooperation</h2>
     </div>
     <div class="editorial-grid">
       <div class="editorial-item">
@@ -669,10 +696,10 @@
         <div class="work-mockup">
           <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/caja-de-heramientas.webp" alt="Caja de herramientas Fundación Alpina" loading="lazy">
         </div>
-        <h3>Caja de herramientas — Fundación Alpina / Naciones Unidas</h3>
-        <p>Diseño e implementación de repositorio de documentos para la
-        población migrante venezolana: adultos, niñas, niños y
-        adolescentes.</p>
+        <h3 data-i18n="ed1h">Toolkit — Fundación Alpina / United Nations</h3>
+        <p data-i18n="ed1p">Design and implementation of a document
+        repository for the Venezuelan migrant population: adults, girls,
+        boys and adolescents.</p>
       </div>
       <div class="editorial-item">
         <div class="work-year">2023</div>
@@ -680,29 +707,29 @@
           <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/cartillas.webp" alt="Retorno a la Alegría UNICEF" loading="lazy">
         </div>
         <h3>Retorno a la Alegría — UNICEF</h3>
-        <p>Diseño, diagramación e ilustración del rediseño de la
-        metodología: guía de socios implementadores, manual de juegos y
-        manual del voluntario.</p>
+        <p data-i18n="ed2p">Design, layout and illustration for the
+        methodology redesign: implementing-partner guide, games manual and
+        volunteer manual.</p>
       </div>
       <div class="editorial-item">
         <div class="work-year">2023</div>
         <div class="work-mockup">
           <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/guias-alpina.webp" alt="Guías metodológicas Fundación Alpina" loading="lazy">
         </div>
-        <h3>Guías metodológicas — Fundación Alpina</h3>
-        <p>Diseño e ilustración de repositorio de documentos para
-        población rural: enfoque diferencial de género, producción
-        sostenible, manual del extensionista.</p>
+        <h3 data-i18n="ed3h">Methodological guides — Fundación Alpina</h3>
+        <p data-i18n="ed3p">Design and illustration of a document
+        repository for rural communities: gender-differential approach,
+        sustainable production, extension-worker manual.</p>
       </div>
       <div class="editorial-item">
         <div class="work-year">2024</div>
         <div class="work-mockup">
           <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/laboratroio%20(1).webp" alt="Laboratorio de Innovación Comunitaria" loading="lazy">
         </div>
-        <h3>Laboratorio de Innovación Comunitaria — Naciones Unidas Colombia</h3>
-        <p>Diseño e implementación, ilustraciones de repositorio de
-        documentos para proyecto de aplicación de metodología en la
-        atención de emergencias específicas.</p>
+        <h3 data-i18n="ed4h">Community Innovation Lab — United Nations Colombia</h3>
+        <p data-i18n="ed4p">Design, implementation and illustrations for a
+        document repository supporting a methodology applied to specific
+        emergency response.</p>
       </div>
     </div>
   </div>
@@ -711,15 +738,15 @@
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="label">Trabajo seleccionado</div>
-      <h2>Contenido &amp; motion</h2>
+      <div class="label" data-i18n="labelSelected">Selected work</div>
+      <h2 data-i18n="h2Motion">Content &amp; motion</h2>
     </div>
     <div class="content-block">
       <div class="reel-card">
-        <h3>Reels &amp; contenido vertical</h3>
-        <p>Edición de video vertical y piezas para redes sociales, con
-        ilustración digital aplicada a contenido de marca.</p>
-        <div class="work-tags">CapCut Pro · Ilustración digital</div>
+        <h3 data-i18n="reelH">Reels &amp; vertical content</h3>
+        <p data-i18n="reelP">Vertical video editing and social media pieces,
+        with digital illustration applied to brand content.</p>
+        <div class="work-tags" data-i18n="reelTags">CapCut Pro · Digital illustration</div>
       </div>
       <div class="ai-block">
         <div class="software-grid">
@@ -736,7 +763,7 @@
             <div class="sw-bar"><span style="width:85%"></span></div>
           </div>
         </div>
-        <div class="ai-row"><div class="k">Formatos</div><div>Reels, piezas cuadradas y verticales para redes</div></div>
+        <div class="ai-row"><div class="k" data-i18n="formatsLabel">Formats</div><div data-i18n="formatsValue">Reels, square and vertical pieces for social media</div></div>
       </div>
     </div>
   </div>
@@ -745,25 +772,26 @@
 <section id="experiencia">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="label">Experiencia</div>
-      <h2>Trayectoria profesional</h2>
+      <div class="label" data-i18n="navExp">Experience</div>
+      <h2 data-i18n="h2Experience">Professional experience</h2>
     </div>
     <div class="timeline">
       <div class="edu-row">
         <div class="work-year">2023 — 2024</div>
         <div>
-          <h3>Diseñadora gráfica — Ivolución, Bogotá</h3>
-          <p>Identidad visual, UI, UX, web y editorial. Diseño de interfaz
-          para En Cadena, Lukin, Mi Gestor y +Listos, y piezas editoriales
-          para UNICEF, Naciones Unidas Colombia y Fundación Alpina.</p>
+          <h3 data-i18n="exp1Role">Graphic Designer — Ivolución, Bogotá</h3>
+          <p data-i18n="exp1Desc">Visual identity, UI, UX, web and
+          editorial. Interface design for En Cadena, Lukin, Mi Gestor and
+          +Listos, and editorial pieces for UNICEF, United Nations Colombia
+          and Fundación Alpina.</p>
         </div>
       </div>
       <div class="edu-row">
         <div class="work-year">2022 — 2023</div>
         <div>
-          <h3>Diseñadora gráfica — CCR Effect, Florida</h3>
-          <p>Marketing digital y diseño web para las cuentas de la
-          compañía.</p>
+          <h3 data-i18n="exp2Role">Graphic Designer — CCR Effect, Florida</h3>
+          <p data-i18n="exp2Desc">Digital marketing and web design for the
+          company's accounts.</p>
         </div>
       </div>
     </div>
@@ -773,36 +801,36 @@
 <section id="formacion">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="label">Formación</div>
-      <h2>Educación</h2>
+      <div class="label" data-i18n="navEdu">Education</div>
+      <h2 data-i18n="navEdu">Education</h2>
     </div>
     <div class="timeline">
       <div class="edu-row">
-        <div class="work-year">Actualidad</div>
+        <div class="work-year" data-i18n="present">Present</div>
         <div>
-          <h3>Tecnólogo en Desarrollo Multimedia y Web</h3>
-          <p>SENA Risaralda — en etapa productiva.</p>
-          <span class="edu-tag">En curso</span>
+          <h3 data-i18n="edu1h">Technologist in Multimedia and Web Development</h3>
+          <p data-i18n="edu1p">SENA Risaralda — work-placement stage.</p>
+          <span class="edu-tag" data-i18n="inProgress">In progress</span>
         </div>
       </div>
       <div class="edu-row">
         <div class="work-year">2023</div>
         <div>
-          <h3>Diseño de interfaces únicas</h3>
+          <h3 data-i18n="edu2h">Unique Interface Design</h3>
           <p>Platzy.</p>
         </div>
       </div>
       <div class="edu-row">
         <div class="work-year">2016</div>
         <div>
-          <h3>Tecnólogo en Diseño para la Industria de la Moda</h3>
+          <h3 data-i18n="edu3h">Technologist in Fashion Industry Design</h3>
           <p>SENA CTA.</p>
         </div>
       </div>
       <div class="edu-row">
         <div class="work-year">2012</div>
         <div>
-          <h3>Bachillerato Académico</h3>
+          <h3 data-i18n="edu4h">Academic High School Diploma</h3>
           <p>Instituto Comercial Práctico INSCOP.</p>
         </div>
       </div>
@@ -812,22 +840,24 @@
 
 <section class="avail">
   <div class="wrap reveal">
-    <h2>Disponible para nuevos proyectos</h2>
-    <p>Trabajo en remoto desde Colombia, en interfaz, diseño web y sistemas
-    editoriales. Si tienes un proyecto en mente, hablemos.</p>
-    <span class="status-dot">Disponible para trabajo remoto</span>
+    <h2 data-i18n="availH">Available for new projects</h2>
+    <p data-i18n="availP">I work remotely from Colombia on interface, web
+    design and editorial systems. If you have a project in mind, let's
+    talk.</p>
+    <span class="status-dot" data-i18n="statusDot">Available for remote work</span>
   </div>
 </section>
 
 <section id="contacto">
   <div class="wrap">
     <div class="contact-grid reveal">
-      <div class="label">Contacto</div>
+      <div class="label" data-i18n="navContact">Contact</div>
       <div class="contact-list">
         <a href="mailto:melisa.sanchez.molina.1995@gmail.com">Email<span class="sm">melisa.sanchez.molina.1995@gmail.com</span></a>
         <a href="https://wa.me/573206917205" target="_blank" rel="noopener">WhatsApp<span class="sm">+57 320 691 7205</span></a>
         <a href="https://www.linkedin.com/in/melisa-s%C3%A1nchez-3078b3330/" target="_blank" rel="noopener">LinkedIn<span class="sm">melisa-sánchez</span></a>
         <a href="https://www.behance.net/melisasanchezmeiw" target="_blank" rel="noopener">Behance<span class="sm">melisasanchezmeiw</span></a>
+        <a href="https://takoiartist.github.io/takoi-artist/about.html" target="_blank" rel="noopener">Takoi Artist<span class="sm" data-i18n="takoiSub">Illustration &amp; animation studio</span></a>
         <a href="https://www.instagram.com/meiw_creative1995/" target="_blank" rel="noopener">Instagram<span class="sm">@meiw_creative1995</span></a>
       </div>
     </div>
@@ -841,9 +871,10 @@
       <a href="mailto:melisa.sanchez.molina.1995@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/melisa-s%C3%A1nchez-3078b3330/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://www.behance.net/melisasanchezmeiw" target="_blank" rel="noopener">Behance</a>
+      <a href="https://takoiartist.github.io/takoi-artist/about.html" target="_blank" rel="noopener">Takoi Artist</a>
       <a href="https://www.instagram.com/meiw_creative1995/" target="_blank" rel="noopener">Instagram</a>
     </div>
-    <div class="footer-copy">© <span id="year"></span> Melisa Sánchez — MEIW Creative. Todos los derechos reservados.</div>
+    <div class="footer-copy">© <span id="year"></span> Melisa Sánchez — MEIW Creative. <span data-i18n="rightsReserved">All rights reserved.</span></div>
   </div>
 </footer>
 
@@ -853,6 +884,112 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- i18n: English (default) / Spanish ---------- */
+  const i18n = {
+    es: {
+      navWork:"Trabajo", navExp:"Experiencia", navEdu:"Formación", navContact:"Contacto",
+      navCv:"Descargar CV",
+      heroMeta1:"Años de experiencia", heroMeta2:"Interfaz y producto",
+      heroMeta3:"Diseño y actualización de sitios", heroMeta4:"Guías, manuales, publicaciones",
+      heroBtnWork:"Ver proyectos", statusDot:"Disponible para trabajo remoto",
+      labelProfile:"Perfil",
+      profileP1:"Soy diseñadora digital con más de cuatro años de experiencia entre interfaz, web y editorial. Trabajo en la traducción de sistemas complejos —plataformas de gestión, metodologías de intervención social, repositorios documentales— en productos visuales que la gente efectivamente usa.",
+      profileP3:"Actualmente curso el Tecnólogo en Desarrollo Multimedia y Web del SENA, en etapa productiva, y trabajo como freelancer en diseño digital, UI y contenido.",
+      factEsN:"Español", factEsD:"Nativo", factEnN:"Inglés", factEnD:"Lectura con apoyo de herramientas",
+      factCoD:"Disponible en remoto",
+      chipTeam:"Trabajo en equipo", chipAuto:"Autonomía", chipTime:"Gestión de tiempo", chipCreative:"Creatividad",
+      labelAreas:"Áreas", h2Areas:"En qué trabajo",
+      exp1h:"Interfaz &amp; producto", exp1p:"Diseño de interfaz a partir de historias de usuario: flujos, secciones, estados y componentes para plataformas web. Rebranding de producto.",
+      exp2h:"Diseño web", exp2p:"Diseño y actualización de sitios web, identidad visual aplicada a entornos digitales.",
+      exp3h:"Editorial &amp; sistemas", exp3p:"Diagramación de guías, manuales y metodologías. Repositorios documentales. Sistemas gráficos para publicaciones de largo formato.",
+      exp4h:"Contenido &amp; motion", exp4p:"Ilustración digital, edición de Reels y contenido vertical en CapCut Pro, piezas para redes sociales.",
+      labelSelected:"Trabajo seleccionado", h2Interfaz:"Interfaz &amp; producto digital",
+      workEnCadenaP:"Rebranding de la plataforma En Cadena, diseño de historias de usuario y planeación de la experiencia de usuario.",
+      tagInterfaz:"Ivolución · Diseño de interfaz",
+      internalProject:"Proyecto interno · sin enlace público",
+      workListosP:"Diseño de historias de usuario, ilustración de iconos, botones y secciones de la plataforma.",
+      viewProject:"Ver proyecto",
+      workGestorP:"Diseño de historias de usuario para plataforma de gestión.",
+      workGenericP:"Diseño de historias de usuario, ilustración de iconos, botones y secciones.",
+      h2Editorial:"Editorial &amp; cooperación",
+      ed1h:"Caja de herramientas — Fundación Alpina / Naciones Unidas",
+      ed1p:"Diseño e implementación de repositorio de documentos para la población migrante venezolana: adultos, niñas, niños y adolescentes.",
+      ed2p:"Diseño, diagramación e ilustración del rediseño de la metodología: guía de socios implementadores, manual de juegos y manual del voluntario.",
+      ed3h:"Guías metodológicas — Fundación Alpina",
+      ed3p:"Diseño e ilustración de repositorio de documentos para población rural: enfoque diferencial de género, producción sostenible, manual del extensionista.",
+      ed4h:"Laboratorio de Innovación Comunitaria — Naciones Unidas Colombia",
+      ed4p:"Diseño e implementación, ilustraciones de repositorio de documentos para proyecto de aplicación de metodología en la atención de emergencias específicas.",
+      h2Motion:"Contenido &amp; motion",
+      reelH:"Reels &amp; contenido vertical",
+      reelP:"Edición de video vertical y piezas para redes sociales, con ilustración digital aplicada a contenido de marca.",
+      reelTags:"CapCut Pro · Ilustración digital",
+      formatsLabel:"Formatos", formatsValue:"Reels, piezas cuadradas y verticales para redes",
+      h2Experience:"Trayectoria profesional",
+      exp1Role:"Diseñadora gráfica — Ivolución, Bogotá",
+      exp1Desc:"Identidad visual, UI, UX, web y editorial. Diseño de interfaz para En Cadena, Lukin, Mi Gestor y +Listos, y piezas editoriales para UNICEF, Naciones Unidas Colombia y Fundación Alpina.",
+      exp2Role:"Diseñadora gráfica — CCR Effect, Florida",
+      exp2Desc:"Marketing digital y diseño web para las cuentas de la compañía.",
+      present:"Actualidad",
+      edu1h:"Tecnólogo en Desarrollo Multimedia y Web", edu1p:"SENA Risaralda — en etapa productiva.",
+      inProgress:"En curso",
+      edu2h:"Diseño de interfaces únicas",
+      edu3h:"Tecnólogo en Diseño para la Industria de la Moda",
+      edu4h:"Bachillerato Académico",
+      availH:"Disponible para nuevos proyectos",
+      availP:"Trabajo en remoto desde Colombia, en interfaz, diseño web y sistemas editoriales. Si tienes un proyecto en mente, hablemos.",
+      takoiSub:"Estudio de ilustración y animación",
+      rightsReserved:"Todos los derechos reservados.",
+      clientUN:"Naciones Unidas Colombia",
+      pageTitle:"Melisa Sánchez — Diseñadora digital y multimedia | UI, Web & Editorial",
+      metaDescription:"Diseñadora digital y multimedia con más de 4 años de experiencia en UI, diseño web y editorial. Proyectos para UNICEF, Naciones Unidas y Fundación Alpina. Disponible para trabajo remoto desde Colombia.",
+      ogTitle:"Melisa Sánchez — Diseñadora digital y multimedia",
+      ogDescription:"UI, Web y Editorial. Proyectos para UNICEF, Naciones Unidas y Fundación Alpina. Disponible para trabajo remoto."
+    },
+    esHtml: {
+      heroRole:'<strong>Diseñadora digital y multimedia.</strong> Diseño interfaz, sitios web y sistemas editoriales para plataformas y organizaciones que necesitan comunicar con claridad.',
+      profileP2:'En Ivolución diseñé la interfaz de varias plataformas digitales, desde el rebranding de En Cadena hasta los flujos de Lukin, Mi Gestor y el proyecto +Listos con UNICEF. En paralelo <strong>trabajé en conjunto</strong> en piezas de la línea editorial para UNICEF, Naciones Unidas Colombia y Fundación Alpina: diseño, diagramación e ilustración de guías y metodologías completas.'
+    }
+  };
+
+  // Capture the English defaults straight from the markup so both languages stay in sync with the HTML.
+  const enText = {}, enHtml = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { enText[el.dataset.i18n] = el.textContent.trim().replace(/\s+/g,' '); });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { enHtml[el.dataset.i18nHtml] = el.innerHTML.trim(); });
+  i18n.en = enText;
+  i18n.enHtml = enHtml;
+  const enMeta = {
+    pageTitle: document.getElementById('pageTitle').textContent,
+    metaDescription: document.getElementById('metaDescription').getAttribute('content'),
+    ogTitle: document.getElementById('ogTitle').getAttribute('content'),
+    ogDescription: document.getElementById('ogDescription').getAttribute('content')
+  };
+
+  let currentLang = 'en';
+  const langToggle = document.getElementById('langToggle');
+
+  function applyLang(lang){
+    const textDict = lang === 'es' ? i18n.es : i18n.en;
+    const htmlDict = lang === 'es' ? i18n.esHtml : i18n.enHtml;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (textDict[key] !== undefined) el.textContent = textDict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.dataset.i18nHtml;
+      if (htmlDict[key] !== undefined) el.innerHTML = htmlDict[key];
+    });
+    const metaDict = lang === 'es' ? i18n.es : enMeta;
+    document.getElementById('pageTitle').textContent = metaDict.pageTitle;
+    document.getElementById('metaDescription').setAttribute('content', metaDict.metaDescription);
+    document.getElementById('ogTitle').setAttribute('content', metaDict.ogTitle);
+    document.getElementById('ogDescription').setAttribute('content', metaDict.ogDescription);
+    document.documentElement.lang = lang;
+    langToggle.textContent = lang === 'es' ? 'EN' : 'ES';
+    currentLang = lang;
+  }
+
+  langToggle.addEventListener('click', () => applyLang(currentLang === 'en' ? 'es' : 'en'));
 
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
