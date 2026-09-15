@@ -71,8 +71,6 @@
 
   h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;letter-spacing:-0.01em;}
 
-  /* Etiqueta tipo "pill" con puntitos — el mismo lenguaje visual del CV
-     ("Perfil profesional", "Software", "Contacto"...) */
   .label{
     display:inline-flex; align-items:center;
     align-self:flex-start; justify-self:start;
@@ -110,7 +108,6 @@
   }
   .link-underline:hover::after{ right:0; }
 
-  /* NAV */
   header.nav{
     position:sticky; top:0; z-index:50;
     background:rgba(241,240,245,.88);
@@ -146,7 +143,6 @@
   }
   .lang-toggle:hover{ background:var(--ink); color:var(--paper); }
 
-  /* HERO */
   .hero{ padding:96px 0 72px; }
   .hero-name{ font-size:clamp(56px, 10vw, 118px); line-height:.94; }
   .hero-role{
@@ -189,7 +185,6 @@
     background:var(--meiw);
   }
 
-  /* CLIENTS */
   .clients{
     padding:26px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
   }
@@ -199,7 +194,6 @@
     align-items:center; justify-content:space-between;
   }
 
-  /* SECTIONS */
   section{ padding:88px 0; }
   section + section{ border-top:1px solid var(--line); }
   .sec-head{
@@ -208,7 +202,6 @@
   .sec-head h2{ font-size:clamp(28px,4vw,38px); }
   .sec-head .label{ padding-top:6px; }
 
-  /* PROFILE */
   .profile-grid{ display:grid; grid-template-columns:200px 1fr; gap:32px; }
   .profile-text{ max-width:640px; font-size:18px; }
   .profile-text p{ margin:0 0 20px; }
@@ -230,7 +223,6 @@
   .profile-facts .n{ font-family:var(--serif); font-size:15px; margin-bottom:4px; }
   .profile-facts .d{ font-size:13.5px; color:var(--ink-soft); }
 
-  /* EXPERTISE */
   .expertise-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
     background:var(--line); border:1px solid var(--line);
@@ -239,7 +231,6 @@
   .expertise-item h3{ font-size:21px; margin-bottom:12px; }
   .expertise-item p{ margin:0; color:var(--ink-soft); font-size:15px; }
 
-  /* WORK */
   .work-row{
     padding:30px 0; border-top:1px solid var(--line);
     display:grid; grid-template-columns:200px 1fr; gap:32px;
@@ -259,7 +250,6 @@
   }
   .work-link.muted{ color:var(--ink-soft); border-bottom:1px solid var(--line); }
 
-  /* MOCKUPS */
   .work-mockup{
     margin-top:20px;
     flex:1 1 420px;
@@ -281,7 +271,6 @@
     .work-mockup{ min-width:0; max-width:100%; flex-basis:100%; }
   }
 
-  /* EDITORIAL */
   .editorial-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:48px 32px;
   }
@@ -290,7 +279,6 @@
   .editorial-item p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
   .editorial-item .work-mockup{ margin:0 0 18px 0; }
 
-  /* CONTENT / MOTION */
   .content-block{
     display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:start;
   }
@@ -309,7 +297,6 @@
   .ai-row:last-child{ padding-bottom:0; }
   .ai-row .k{ color:var(--ink-soft); }
 
-  /* TOOLKIT */
   .toolkit-list{
     display:grid; grid-template-columns:repeat(2,1fr); gap:12px 40px;
   }
@@ -319,7 +306,6 @@
   }
   .toolkit-list span.t{ color:var(--ink-soft); font-size:13.5px; }
 
-  /* EDUCATION / EXPERIENCE — timeline vertical, como en el CV */
   .timeline{ position:relative; padding-left:28px; }
   .timeline::before{
     content:""; position:absolute; left:5px; top:8px; bottom:8px;
@@ -343,7 +329,6 @@
     border:1px solid var(--meiw); border-radius:999px; padding:3px 10px;
   }
 
-  /* SOFTWARE — íconos + barra, como el bloque "Software" del CV */
   .software-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:18px 32px; margin-top:22px;
   }
@@ -358,10 +343,8 @@
   .sw-bar{ flex:1; height:10px; border-radius:999px; background:var(--paper-deep); overflow:hidden; }
   .sw-bar span{ display:block; height:100%; background:var(--meiw); border-radius:999px; }
 
-  /* SOFT SKILLS */
   .skills-row{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
 
-  /* AVAILABILITY */
   .avail{
     background:var(--ink); color:var(--paper); padding:80px 0; text-align:left;
   }
@@ -370,7 +353,6 @@
   .avail .status-dot{ color:#BEBAC9; margin:22px 0 0; }
   .avail .status-dot::before{ background:var(--meiw); }
 
-  /* CONTACT */
   .contact-grid{
     display:grid; grid-template-columns:200px 1fr; gap:32px;
   }
@@ -384,7 +366,6 @@
   .contact-list a .sm{ font-family:var(--sans); font-size:14px; color:var(--ink-soft); }
   .contact-list a:hover{ color:var(--meiw-dark); }
 
-  /* FOOTER */
   footer{
     padding:40px 0 24px;
     font-size:13px;
@@ -412,7 +393,6 @@
     padding-top:16px; border-top:1px solid var(--line); width:100%;
   }
 
-  /* WHATSAPP FLOAT */
   .wa-float{
     position:fixed; bottom:22px; right:22px; z-index:60;
     width:52px; height:52px; border-radius:50%;
@@ -428,7 +408,6 @@
   }
   .wa-float svg{ width:26px; height:26px; }
 
-  /* REVEAL */
   .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.in{ opacity:1; transform:none; }
 
@@ -601,10 +580,10 @@
             user story design and UX planning.</p>
             <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
             </div>
-            <span class="work-link muted" data-i18n="internalProject">Internal project · no public link</span>
+            <a class="work-link link-underline" href="https://mejoresproveedores.gov.co/" target="_blank" rel="noopener" data-i18n="viewProject">View project</a>
           </div>
           <div class="work-mockup">
-            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/ss.webp" alt="Mockup En Cadena" alt="Mockup En Cadena" loading="lazy">
+            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/ss.webp" alt="Mockup En Cadena" loading="lazy">
           </div>
         </div>
       </div>
@@ -662,24 +641,6 @@
           </div>
         </div>
       </div>
-
-      <div class="work-row">
-        <div class="work-year">2024</div>
-        <div class="work-content">
-          <div class="work-main">
-            <div class="work-info">
-              <h3>Marca Blanca</h3>
-            <p data-i18n="workGenericP">User story design, illustration of
-            icons, buttons and sections.</p>
-            <div class="work-tags" data-i18n="tagInterfaz">Ivolución · Interface design</div>
-            </div>
-            <span class="work-link muted" data-i18n="internalProject">Internal project · no public link</span>
-          </div>
-          <div class="work-mockup">
-            <img src="https://raw.githubusercontent.com/Takoiartist/cv-melisa-sanchez-/496871e0cdb83f5826cbf28b0e746aa075eed003/marca%20blanca%20(1).webp" alt="Mockup Marca Blanca" loading="lazy">
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -694,12 +655,15 @@
       <div class="editorial-item">
         <div class="work-year">2023</div>
         <div class="work-mockup">
-          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/caja-de-heramientas.webp" alt="Caja de herramientas Fundación Alpina" loading="lazy">
+          <a href="https://cajadeherramientas.fundacionalpina.org/#metodologia" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/caja-de-heramientas.webp" alt="Caja de herramientas Fundación Alpina" loading="lazy">
+          </a>
         </div>
         <h3 data-i18n="ed1h">Toolkit — Fundación Alpina / United Nations</h3>
         <p data-i18n="ed1p">Design and implementation of a document
         repository for the Venezuelan migrant population: adults, girls,
         boys and adolescents.</p>
+        <a class="work-link link-underline" href="https://cajadeherramientas.fundacionalpina.org/#metodologia" target="_blank" rel="noopener" data-i18n="viewProject" style="margin-top:12px; display:inline-block;">View project</a>
       </div>
       <div class="editorial-item">
         <div class="work-year">2023</div>
@@ -761,6 +725,14 @@
           <div class="software-item">
             <div class="sw-icon">Ps</div>
             <div class="sw-bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="software-item">
+            <div class="sw-icon">CS</div>
+            <div class="sw-bar"><span style="width:75%"></span></div>
+          </div>
+          <div class="software-item">
+            <div class="sw-icon" style="font-size:11px;">Suite</div>
+            <div class="sw-bar"><span style="width:80%"></span></div>
           </div>
         </div>
         <div class="ai-row"><div class="k" data-i18n="formatsLabel">Formats</div><div data-i18n="formatsValue">Reels, square and vertical pieces for social media</div></div>
