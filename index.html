@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melisa Sánchez — Diseñadora digital y multimedia | UI, Web & Editorial</title>
+<meta name="description" content="Diseñadora digital y multimedia con más de 4 años de experiencia en UI, diseño web y editorial. Proyectos para UNICEF, Naciones Unidas y Fundación Alpina. Disponible para trabajo remoto desde Colombia.">
+<meta name="keywords" content="digital designer colombia, ui designer remoto, diseñadora web colombia, multimedia designer, diseñadora editorial, remote designer latam, diseñadora ui ux">
+<meta property="og:title" content="Melisa Sánchez — Diseñadora digital y multimedia">
+<meta property="og:description" content="UI, Web y Editorial. Proyectos para UNICEF, Naciones Unidas y Fundación Alpina. Disponible para trabajo remoto.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon con logo MEIW Creative -->
+<link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/Takoiartist/takoi-artist/041301b11863a7e9699e3cd4b6ffed550ac81658/logo%20meiw%20creative.webp">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Takoiartist/takoi-artist/041301b11863a7e9699e3cd4b6ffed550ac81658/logo%20meiw%20creative.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Melisa Sánchez Molina",
+  "jobTitle": "Diseñadora digital y multimedia",
+  "knowsAbout": ["UI Design", "Diseño Web", "Diseño Editorial", "Multimedia", "Ilustración digital"],
+  "sameAs": [
+    "https://www.linkedin.com/in/melisa-s%C3%A1nchez-3078b3330/",
+    "https://www.behance.net/melisasanchezmeiw",
+    "https://www.instagram.com/meiw_creative1995/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,420&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #F1F0F5;
+    --paper-deep: #E9E7F0;
+    --ink: #18171C;
+    --ink-soft: #55525F;
+    --meiw: #88A9AC;
+    --meiw-dark: #6B8A8D;
+    --meiw-light: #DCE8E9;
+    --line: #D9D6E2;
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', sans-serif;
+    --wrap: 1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:480;margin:0;letter-spacing:-0.01em;}
+
+  .label{
+    font-size:13px;
+    color:var(--ink-soft);
+    font-weight:500;
+    margin:0 0 10px;
+  }
+
+  .link-underline{ position:relative; display:inline-block; }
+  .link-underline::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-2px;
+    height:1px; background:currentColor; transition:right .28s ease;
+  }
+  .link-underline:hover::after{ right:0; }
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(241,240,245,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--wrap); margin:0 auto; padding:14px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-mark{
+    font-family:var(--serif); font-size:20px; font-weight:600;
+    display:flex; align-items:center; gap:10px;
+  }
+  .nav-mark img{ width:32px; height:32px; object-fit:contain; }
+  .nav-links{
+    display:flex; gap:28px; list-style:none; margin:0; padding:0;
+    font-size:14px; color:var(--ink-soft);
+  }
+  .nav-links a{ transition:color .2s ease; }
+  .nav-links a:hover, .nav-links a.active{ color:var(--ink); }
+  .nav-cv{
+    font-size:14px; border:1px solid var(--ink); padding:8px 16px;
+    border-radius:2px; white-space:nowrap;
+  }
+  .nav-cv:hover{ background:var(--ink); color:var(--paper); }
+
+  /* HERO */
+  .hero{ padding:96px 0 72px; }
+  .hero-name{ font-size:clamp(56px, 10vw, 118px); line-height:.94; }
+  .hero-role{
+    margin-top:20px; max-width:640px;
+    font-size:clamp(18px,2.4vw,22px);
+    color:var(--ink-soft); font-weight:400;
+  }
+  .hero-role strong{ color:var(--ink); font-weight:500; }
+
+  .hero-meta{
+    margin-top:44px; display:flex; flex-wrap:wrap; gap:0;
+    border-top:1px solid var(--line);
+  }
+  .hero-meta div{
+    flex:1 1 160px; padding:16px 20px 16px 0;
+    border-right:1px solid var(--line);
+  }
+  .hero-meta div:last-child{ border-right:none; }
+  .hero-meta .n{ font-family:var(--serif); font-size:26px; }
+  .hero-meta .l{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+
+  .hero-actions{
+    margin-top:40px; display:flex; flex-wrap:wrap; gap:14px; align-items:center;
+  }
+  .btn{
+    font-size:14.5px; padding:13px 24px; border-radius:2px;
+    display:inline-block; transition:all .2s ease;
+  }
+  .btn-primary{ background:var(--ink); color:var(--paper); }
+  .btn-primary:hover{ background:var(--meiw-dark); }
+  .btn-ghost{ border:1px solid var(--ink); }
+  .btn-ghost:hover{ background:var(--ink); color:var(--paper); }
+
+  .status-dot{
+    display:inline-flex; align-items:center; gap:9px;
+    font-size:14px; color:var(--ink-soft); margin-left:6px;
+  }
+  .status-dot::before{
+    content:""; width:7px; height:7px; border-radius:50%;
+    background:var(--meiw);
+  }
+
+  /* CLIENTS */
+  .clients{
+    padding:26px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .clients .wrap{
+    display:flex; flex-wrap:wrap; gap:14px 36px;
+    font-family:var(--serif); font-size:17px; color:var(--ink-soft);
+    align-items:center; justify-content:space-between;
+  }
+
+  /* SECTIONS */
+  section{ padding:88px 0; }
+  section + section{ border-top:1px solid var(--line); }
+  .sec-head{
+    display:grid; grid-template-columns:200px 1fr; gap:32px; margin-bottom:48px;
+  }
+  .sec-head h2{ font-size:clamp(28px,4vw,38px); }
+  .sec-head .label{ padding-top:6px; }
+
+  /* PROFILE */
+  .profile-grid{ display:grid; grid-template-columns:200px 1fr; gap:32px; }
+  .profile-text{ max-width:640px; font-size:18px; }
+  .profile-text p{ margin:0 0 20px; }
+  .profile-text p:last-child{ margin-bottom:0; }
+
+  .profile-photo{
+    width:160px; height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--meiw);
+    margin-bottom:28px;
+    box-shadow:0 8px 24px rgba(136,169,172,.25);
+  }
+
+  .profile-facts{
+    margin-top:44px; display:flex; flex-wrap:wrap; gap:36px;
+  }
+  .profile-facts div{ min-width:160px; }
+  .profile-facts .n{ font-family:var(--serif); font-size:15px; margin-bottom:4px; }
+  .profile-facts .d{ font-size:13.5px; color:var(--ink-soft); }
+
+  /* EXPERTISE */
+  .expertise-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .expertise-item{ background:var(--paper); padding:34px; }
+  .expertise-item h3{ font-size:21px; margin-bottom:12px; }
+  .expertise-item p{ margin:0; color:var(--ink-soft); font-size:15px; }
+
+  /* WORK */
+  .work-row{
+    padding:30px 0; border-top:1px solid var(--line);
+    display:grid; grid-template-columns:200px 1fr; gap:32px;
+  }
+  .work-row:last-child{ border-bottom:1px solid var(--line); }
+  .work-year{ font-family:var(--serif); font-size:15px; color:var(--ink-soft); padding-top:4px; }
+  .work-main{ display:flex; justify-content:space-between; gap:28px; flex-wrap:wrap; }
+  .work-info{ max-width:600px; flex:1 1 400px; }
+  .work-info h3{ font-size:24px; margin-bottom:8px; transition:color .2s ease; }
+  .work-row:hover .work-info h3{ color:var(--meiw-dark); }
+  .work-info p{ margin:0 0 12px; color:var(--ink-soft); font-size:15px; }
+  .work-tags{ font-size:13px; color:var(--ink-soft); }
+  .work-link{
+    align-self:flex-start; font-size:14px; white-space:nowrap;
+    border-bottom:1px solid var(--ink); padding-bottom:2px;
+  }
+  .work-link.muted{ color:var(--ink-soft); border-bottom:1px solid var(--line); }
+
+  /* MOCKUPS */
+  .work-mockup{
+    margin-top:20px;
+    border-radius:6px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--paper-deep);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .work-mockup:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 40px rgba(136,169,172,.18);
+  }
+  .work-mockup img{ width:100%; height:auto; display:block; }
+
+  /* EDITORIAL */
+  .editorial-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:48px 32px;
+  }
+  .editorial-item h3{ font-size:19px; margin-bottom:8px; }
+  .editorial-item .work-year{ padding:0; margin-bottom:10px; }
+  .editorial-item p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
+  .editorial-item .work-mockup{ margin:0 0 18px 0; }
+
+  /* CONTENT / MOTION */
+  .content-block{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:start;
+  }
+  .reel-card{
+    border:1px solid var(--line); padding:28px; background:var(--paper-deep);
+    border-left:4px solid var(--meiw);
+  }
+  .reel-card h3{ font-size:20px; margin-bottom:10px; }
+  .reel-card p{ color:var(--ink-soft); font-size:15px; margin:0 0 18px; }
+
+  .ai-block{ margin-top:34px; }
+  .ai-row{
+    display:grid; grid-template-columns:180px 1fr; gap:16px;
+    padding:14px 0; border-top:1px solid var(--line); font-size:14.5px;
+  }
+  .ai-row:last-child{ padding-bottom:0; }
+  .ai-row .k{ color:var(--ink-soft); }
+
+  /* TOOLKIT */
+  .toolkit-list{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:12px 40px;
+  }
+  .toolkit-list div{
+    display:flex; justify-content:space-between; border-top:1px solid var(--line);
+    padding:14px 0; font-size:15px;
+  }
+  .toolkit-list span.t{ color:var(--ink-soft); font-size:13.5px; }
+
+  /* EDUCATION */
+  .edu-row{
+    display:grid; grid-template-columns:200px 1fr; gap:32px;
+    padding:22px 0; border-top:1px solid var(--line);
+  }
+  .edu-row:last-child{ border-bottom:1px solid var(--line); }
+  .edu-row h3{ font-size:18px; margin-bottom:4px; }
+  .edu-row p{ margin:0; color:var(--ink-soft); font-size:14.5px; }
+  .edu-tag{
+    display:inline-block; margin-top:8px; font-size:12px; color:var(--meiw-dark);
+    border:1px solid var(--meiw); border-radius:2px; padding:3px 8px;
+  }
+
+  /* AVAILABILITY */
+  .avail{
+    background:var(--ink); color:var(--paper); padding:80px 0; text-align:left;
+  }
+  .avail h2{ font-size:clamp(30px,5vw,46px); max-width:760px; }
+  .avail p{ max-width:560px; color:#BEBAC9; font-size:17px; margin-top:18px; }
+  .avail .status-dot{ color:#BEBAC9; margin:22px 0 0; }
+  .avail .status-dot::before{ background:var(--meiw); }
+
+  /* CONTACT */
+  .contact-grid{
+    display:grid; grid-template-columns:200px 1fr; gap:32px;
+  }
+  .contact-list{ display:flex; flex-direction:column; gap:0; }
+  .contact-list a{
+    font-family:var(--serif); font-size:clamp(24px,4vw,34px);
+    padding:20px 0; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .contact-list a:last-child{ border-bottom:1px solid var(--line); }
+  .contact-list a .sm{ font-family:var(--sans); font-size:14px; color:var(--ink-soft); }
+  .contact-list a:hover{ color:var(--meiw-dark); }
+
+  /* FOOTER */
+  footer{
+    padding:40px 0 24px;
+    font-size:13px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    background:var(--paper-deep);
+  }
+  footer .wrap{
+    display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center;
+  }
+  .footer-logo{
+    height:56px; opacity:.9;
+  }
+  .footer-links{
+    display:flex; flex-wrap:wrap; gap:24px; justify-content:center;
+    font-size:14px;
+  }
+  .footer-links a{
+    display:inline-flex; align-items:center; gap:8px;
+    transition:color .2s ease;
+  }
+  .footer-links a:hover{ color:var(--meiw-dark); }
+  .footer-copy{
+    font-size:12px; color:var(--ink-soft); opacity:.7;
+    padding-top:16px; border-top:1px solid var(--line); width:100%;
+  }
+
+  /* WHATSAPP FLOAT */
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    width:52px; height:52px; border-radius:50%;
+    background:#25D366; color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:26px; line-height:1;
+    box-shadow:0 10px 24px rgba(37,211,102,.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .wa-float:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 14px 30px rgba(37,211,102,.5);
+  }
+  .wa-float svg{ width:26px; height:26px; }
+
+  /* REVEAL */
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @media (max-width: 860px){
+    .wrap{ padding:0 20px; }
+    .nav-links{ display:none; }
+    .sec-head, .profile-grid, .work-row, .content-block, .edu-row, .contact-grid{
+      grid-template-columns:1fr;
+    }
+    .work-year{ padding-top:0; }
+    .expertise-grid{ grid-template-columns:1fr; }
+    .editorial-grid{ grid-template-columns:1fr; }
+    .toolkit-list{ grid-template-columns:1fr; }
+    .hero{ padding:64px 0 48px; }
+    section{ padding:64px 0; }
+    .clients .wrap{ justify-content:flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-mark">
+      <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/041301b11863a7e9699e3cd4b6ffed550ac81658/logo%20meiw%20creative.webp" alt="MEIW Creative">
+      Melisa Sánchez
+    </div>
+    <ul class="nav-links">
+      <li><a href="#trabajo" class="link-underline">Trabajo</a></li>
+      <li><a href="#experiencia" class="link-underline">Experiencia</a></li>
+      <li><a href="#formacion" class="link-underline">Formación</a></li>
+      <li><a href="#contacto" class="link-underline">Contacto</a></li>
+    </ul>
+    <a class="nav-cv" href="mailto:melisa.sanchez.molina.1995@gmail.com?subject=Solicitud%20de%20CV">Descargar CV</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="hero-name">Melisa<br>Sánchez</h1>
+    <p class="hero-role">
+      <strong>Diseñadora digital y multimedia.</strong> Diseño interfaz, sitios web y
+      sistemas editoriales para plataformas y organizaciones que necesitan
+      comunicar con claridad.
+    </p>
+
+    <div class="hero-meta">
+      <div><div class="n">4+</div><div class="l">Años de experiencia</div></div>
+      <div><div class="n">UI / UX</div><div class="l">Interfaz y producto</div></div>
+      <div><div class="n">Web</div><div class="l">Diseño y actualización de sitios</div></div>
+      <div><div class="n">Editorial</div><div class="l">Guías, manuales, publicaciones</div></div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#trabajo" class="btn btn-primary">Ver proyectos</a>
+      <a href="mailto:melisa.sanchez.molina.1995@gmail.com?subject=Solicitud%20de%20CV" class="btn btn-ghost">Descargar CV</a>
+      <a href="#contacto" class="btn btn-ghost">Contacto</a>
+      <span class="status-dot">Disponible para trabajo remoto</span>
+    </div>
+  </div>
+</section>
+
+<div class="clients">
+  <div class="wrap">
+    <span>UNICEF</span>
+    <span>Naciones Unidas Colombia</span>
+    <span>Fundación Alpina</span>
+    <span>En Cadena</span>
+    <span>Ocensa</span>
+  </div>
+</div>
+
+<section id="perfil">
+  <div class="wrap">
+    <div class="profile-grid reveal">
+      <div class="label">Perfil</div>
+      <div>
+        <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/main/melisa%20foto.webp" alt="Melisa Sánchez" class="profile-photo" loading="lazy">
+        
+        <div class="profile-text">
+          <p>Soy diseñadora digital con más de cuatro años de experiencia entre
+          interfaz, web y editorial. Trabajo en la traducción de sistemas
+          complejos —plataformas de gestión, metodologías de intervención
+          social, repositorios documentales— en productos visuales que la
+          gente efectivamente usa.</p>
+          <p>En Ivolución diseñé la interfaz de varias plataformas digitales,
+          desde el rebranding de En Cadena hasta los flujos de Lukin, Mi
+          Gestor y el proyecto +Listos con UNICEF. En paralelo <strong>trabajé en conjunto</strong> en piezas
+          de la línea editorial para UNICEF, Naciones Unidas Colombia y
+          Fundación Alpina: diseño, diagramación e ilustración de guías y
+          metodologías completas.</p>
+          <p>Actualmente curso el Tecnólogo en Desarrollo Multimedia y Web del
+          SENA, en etapa productiva, y trabajo como freelancer en diseño
+          digital, UI y contenido.</p>
+        </div>
+
+        <div class="profile-facts">
+          <div><div class="n">Español</div><div class="d">Nativo</div></div>
+          <div><div class="n">Inglés</div><div class="d">Lectura con apoyo de herramientas</div></div>
+          <div><div class="n">Colombia</div><div class="d">Disponible en remoto</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Áreas</div>
+      <h2>En qué trabajo</h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <h3>Interfaz &amp; producto</h3>
+        <p>Diseño de interfaz a partir de historias de usuario: flujos,
+        secciones, estados y componentes para plataformas web. Rebranding
+        de producto.</p>
+      </div>
+      <div class="expertise-item">
+        <h3>Diseño web</h3>
+        <p>Diseño y actualización de sitios web, identidad visual aplicada
+        a entornos digitales.</p>
+      </div>
+      <div class="expertise-item">
+        <h3>Editorial &amp; sistemas</h3>
+        <p>Diagramación de guías, manuales y metodologías. Repositorios
+        documentales. Sistemas gráficos para publicaciones de largo
+        formato.</p>
+      </div>
+      <div class="expertise-item">
+        <h3>Contenido &amp; motion</h3>
+        <p>Ilustración digital, edición de Reels y contenido vertical en
+        CapCut Pro, piezas para redes sociales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trabajo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Trabajo seleccionado</div>
+      <h2>Interfaz &amp; producto digital</h2>
+    </div>
+
+    <div class="work-list">
+      <div class="work-row">
+        <div class="work-year">2023</div>
+        <div class="work-main">
+          <div class="work-info">
+            <h3>En Cadena</h3>
+            <p>Rebranding de la plataforma En Cadena, diseño de historias
+            de usuario y planeación de la experiencia de usuario.</p>
+            <div class="work-tags">Ivolución · Diseño de interfaz</div>
+            <div class="work-mockup">
+              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/en-cadena.webp" alt="Mockup En Cadena" loading="lazy">
+            </div>
+          </div>
+          <span class="work-link muted">Proyecto interno · sin enlace público</span>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="work-year">2024</div>
+        <div class="work-main">
+          <div class="work-info">
+            <h3>+Listos — UNICEF</h3>
+            <p>Diseño de historias de usuario, ilustración de iconos,
+            botones y secciones de la plataforma.</p>
+            <div class="work-tags">Ivolución · Diseño de interfaz</div>
+            <div class="work-mockup">
+              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/mas%20lsitos.webp" alt="Mockup +Listos UNICEF" loading="lazy">
+            </div>
+          </div>
+          <a class="work-link link-underline" href="https://maslistospruebas.ivolucion.com/inicio-sesion" target="_blank" rel="noopener">Ver proyecto</a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="work-year">2023</div>
+        <div class="work-main">
+          <div class="work-info">
+            <h3>Mi Gestor</h3>
+            <p>Diseño de historias de usuario para plataforma de gestión.</p>
+            <div class="work-tags">Ivolución · Diseño de interfaz</div>
+            <div class="work-mockup">
+              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/mi%20gestor.webp" alt="Mockup Mi Gestor" loading="lazy">
+            </div>
+          </div>
+          <a class="work-link link-underline" href="https://mgpruebascc.ivolucion.com/inicio-sesion" target="_blank" rel="noopener">Ver proyecto</a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="work-year">2024</div>
+        <div class="work-main">
+          <div class="work-info">
+            <h3>Lukin</h3>
+            <p>Diseño de historias de usuario, ilustración de iconos,
+            botones y secciones.</p>
+            <div class="work-tags">Ivolución · Diseño de interfaz</div>
+            <div class="work-mockup">
+              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/lukin.webp" alt="Mockup Lukin" loading="lazy">
+            </div>
+          </div>
+          <a class="work-link link-underline" href="https://lukin.ivolucion.com/inicio" target="_blank" rel="noopener">Ver proyecto</a>
+        </div>
+      </div>
+
+      <div class="work-row">
+        <div class="work-year">2024</div>
+        <div class="work-main">
+          <div class="work-info">
+            <h3>Marca Blanca</h3>
+            <p>Diseño de historias de usuario, ilustración de iconos,
+            botones y secciones.</p>
+            <div class="work-tags">Ivolución · Diseño de interfaz</div>
+            <div class="work-mockup">
+              <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/marca%20blanca.webp" alt="Mockup Marca Blanca" loading="lazy">
+            </div>
+          </div>
+          <span class="work-link muted">Proyecto interno · sin enlace público</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="label">Trabajo seleccionado</div>
+      <h2>Editorial &amp; cooperación</h2>
+    </div>
+    <div class="editorial-grid">
+      <div class="editorial-item">
+        <div class="work-year">2023</div>
+        <div class="work-mockup">
+          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/caja-de-heramientas.webp" alt="Caja de herramientas Fundación Alpina" loading="lazy">
+        </div>
+        <h3>Caja de herramientas — Fundación Alpina / Naciones Unidas</h3>
+        <p>Diseño e implementación de repositorio de documentos para la
+        población migrante venezolana: adultos, niñas, niños y
+        adolescentes.</p>
+      </div>
+      <div class="editorial-item">
+        <div class="work-year">2023</div>
+        <div class="work-mockup">
+          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/cartillas.webp" alt="Retorno a la Alegría UNICEF" loading="lazy">
+        </div>
+        <h3>Retorno a la Alegría — UNICEF</h3>
+        <p>Diseño, diagramación e ilustración del rediseño de la
+        metodología: guía de socios implementadores, manual de juegos y
+        manual del voluntario.</p>
+      </div>
+      <div class="editorial-item">
+        <div class="work-year">2023</div>
+        <div class="work-mockup">
+          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/guias-alpina.webp" alt="Guías metodológicas Fundación Alpina" loading="lazy">
+        </div>
+        <h3>Guías metodológicas — Fundación Alpina</h3>
+        <p>Diseño e ilustración de repositorio de documentos para
+        población rural: enfoque diferencial de género, producción
+        sostenible, manual del extensionista.</p>
+      </div>
+      <div class="editorial-item">
+        <div class="work-year">2024</div>
+        <div class="work-mockup">
+          <img src="https://raw.githubusercontent.com/Takoiartist/takoi-artist/30d56627add1c125370e0a5944cc4d5371d5da72/laboratroio%20(1).webp" alt="Laboratorio de Innovación Comunitaria" loading="lazy">
+        </div>
+        <h3>Laboratorio de Innovación Comunitaria — Naciones Unidas Colombia</h3>
+        <p>Diseño e implementación de repositorio de documentos para
+        proyecto de aplicación de metodología
